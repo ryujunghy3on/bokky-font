@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-40 items-center justify-center w-dvw h-dvh">
       <div className={custom.className}>
-        <p className="text-9xl font-bold">{txt}</p>
+        <p className="text-8xl font-bold">{txt}</p>
       </div>
       <input
         value={txt}
@@ -22,7 +22,7 @@ export default function Home() {
         }}
         className=""
       />
-      <p>QUIRTK</p>
+      <p>QUIRK</p>
     </main>
   );
 }
