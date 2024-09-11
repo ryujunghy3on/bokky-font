@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.text-10xl {
+  font-size: 16rem; /* 원하는 크기로 설정 */
+}
