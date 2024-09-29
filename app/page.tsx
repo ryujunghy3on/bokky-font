@@ -11,22 +11,32 @@ export default function Home() {
   const [txt, setTxt] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // 입력된 값을 대문자로 변환하여 저장
     setTxt(e.target.value.toUpperCase());
   };
 
   return (
-    <main className="flex flex-col gap-40 items-center justify-center w-dvw h-dvh">
-      <div className={custom.className}>
-        <p className="text-10xl">{txt}</p>
+    <main className="flex flex-col gap-40 items-center justify-center w-dvw h-dvh bg-white">
+      <div
+        className={custom.className}
+        style={{
+          width: "fit-content",
+          whiteSpace: "pre-wrap",
+          wordBreak: "break-word",
+        }}
+      >
+        <p
+          className="text-10xl text-center leading-snug"
+          style={{ display: "inline-block", maxWidth: "9ch" }}
+        >
+          {txt}
+        </p>
       </div>
       <input
         value={txt}
         onChange={handleChange}
-        className="border border-black p-2"
+        className="border border-black p-2 fixed inset-0 z-10 bg-red-500  opacity-0 "
         placeholder="Type En here"
       />
-      <p>QUIRK</p>
     </main>
   );
 }
