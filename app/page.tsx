@@ -21,37 +21,44 @@ export default function Home() {
   };
 
   return (
-    <main
-      className="flex flex-col gap-40 items-center justify-center w-full h-screen"
-      style={{
-        backgroundImage: "url('/bg-1.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div
-        className={custom.className}
+    <div className="relative w-full h-screen">
+      <header className="fixed top-0 left-0 w-full h-16 flex justify-between items-center px-8 py-14 z-50">
+        <img src="/logo.svg" alt="Logo" className="h-16" />
+        <div className="text-white text-2xl">Type EN here</div>
+      </header>
+
+      <main
+        className="flex flex-col gap-40 items-center justify-center w-full h-screen pt-16"
         style={{
-          width: "fit-content",
-          whiteSpace: "pre-wrap",
-          wordBreak: "break-word",
+          backgroundImage: "url('/bg-1.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <p
-          className="text-white text-10xl text-center leading-none"
-          style={{ display: "inline-block", maxWidth: "9ch" }}
+        <div
+          className={custom.className}
+          style={{
+            width: "fit-content",
+            whiteSpace: "pre-wrap",
+            wordBreak: "break-word",
+          }}
         >
-          {txt}
-        </p>
-      </div>
-      <input
-        value={txt}
-        onChange={handleChange}
-        className="border border-black p-2 fixed inset-0 z-10 bg-red-500 opacity-0"
-        placeholder="Type En here"
-      />
-    </main>
+          <p
+            className="text-white text-10xl text-center leading-none"
+            style={{ display: "inline-block", maxWidth: "9ch" }}
+          >
+            {txt}
+          </p>
+        </div>
+        <input
+          value={txt}
+          onChange={handleChange}
+          className="border border-black p-2 fixed inset-0 z-10 bg-red-500 opacity-0"
+          placeholder="Type EN here"
+        />
+      </main>
+    </div>
   );
 }
