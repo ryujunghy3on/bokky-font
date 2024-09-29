@@ -10,7 +10,7 @@ const custom = localFont({
 export default function Home() {
   const [txt, setTxt] = useState<string>("");
 
-  const maxChars = 27;
+  const maxChars = 25;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newText = e.target.value.toUpperCase();
@@ -22,9 +22,9 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-screen">
-      <header className="fixed top-0 left-0 w-full h-16 flex justify-between items-center px-8 py-14 z-50">
+      <header className="fixed top-0 left-0 w-full h-16 flex justify-between items-center px-8 py-16 z-50">
         <img src="/logo.svg" alt="Logo" className="h-16" />
-        <div className="text-white text-2xl">Type EN here</div>
+        <p className="text-white text-2xl">Type in English</p>
       </header>
 
       <main
@@ -46,8 +46,8 @@ export default function Home() {
           }}
         >
           <p
-            className="text-white text-10xl text-center leading-none"
-            style={{ display: "inline-block", maxWidth: "9ch" }}
+            className="text-white text-10xl text-center leading-none tracking-wide"
+            style={{ display: "inline-block", maxWidth: "75ch" }}
           >
             {txt}
           </p>
@@ -55,8 +55,7 @@ export default function Home() {
         <input
           value={txt}
           onChange={handleChange}
-          className="border border-black p-2 fixed inset-0 z-10 bg-red-500 opacity-0"
-          placeholder="Type EN here"
+          className="border border-black p-2 fixed inset-0 z-10 opacity-0"
         />
       </main>
     </div>
