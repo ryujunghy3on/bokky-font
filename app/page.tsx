@@ -10,7 +10,7 @@ const custom = localFont({
 export default function Home() {
   const [txt, setTxt] = useState<string>("");
 
-  const maxChars = 25;
+  const maxChars = 26;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newText = e.target.value.toUpperCase();
