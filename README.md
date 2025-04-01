@@ -3,7 +3,7 @@
 
 </div>
 
-# 🔠 BOKKY — Dingbat Font Project
+# 🔠 BOKKY—Font
 
 > A dingbat-style font design and web typing experience  
 > based on patterns and shapes commonly found in everyday life.
