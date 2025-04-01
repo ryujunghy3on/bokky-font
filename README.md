@@ -20,6 +20,14 @@
 
 ---
 
+## 🔗 Demo
+
+👉 [Try BOKKY](https://project-ryu-font.vercel.app/)  
+Explore the bokky-font in action on the web.
+
+---
+
+
 ## ✨ About BOKKY
 
 BOKKY is a **dingbat-style font** inspired by patterns and objects  
